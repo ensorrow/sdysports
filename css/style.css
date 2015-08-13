@@ -1,0 +1,289 @@
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	font-family: 微软雅黑;
+	text-decoration: none;
+	font-weight: normal;
+}
+html{height: 100%;}
+body{
+	height: 100%;
+}
+header{
+	background-color: #0b56ac;
+	width: 100%;
+	height: 100%;
+	padding-top: 38px;
+}
+nav{
+	width: 980px;
+	height: 76px;
+	margin: 22px auto;
+	background-color: #0078c3;
+}
+nav img{
+	margin-left: 44px;
+	float: left;
+}
+nav ul{
+	width: 810px;
+	float: left;
+}
+nav li{
+	float: left;
+	margin-left: 18px;
+	height: 76px;
+	line-height: 76px;
+}
+nav a{
+	padding: 5px 13px;
+	border:0;
+	border-radius: 8px;	
+	color: #fff;
+}
+nav a:hover{
+	background-color: #00195b;
+	transition:.5s all;/*ie10*/
+ 	-webkit-transition:.5s all;
+}
+#section2{
+	width: 980px;
+	padding: 50px 0 80px 0;
+	overflow: hidden;
+	margin: 0 auto;
+}
+#describe{
+	width: 5880px;
+	position: relative;
+}
+#describe li{
+	float: left;
+	width: 980px;
+	height: 320px;
+}
+#describe li img{
+	width: 450px;
+	float: left;
+}
+#describe li div{
+	height: 100%;
+	width: 530px;
+	background: #7ed2fb;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+#describe li div::before{
+	content: '';
+	display: block;
+	border: 26px rgba(126,209,251,0) solid;
+	border-right-color: rgba(126,209,251,1);
+	position: absolute;
+	left: -52px;
+	top: 180px;
+}
+#describe li p{
+	margin: 20px 0 0 20px;
+	background: #006298;
+	padding-bottom: 25px;
+	position: relative;
+}
+#describe p .title{
+	font-size: 60px;
+	display: block;
+	margin: 0 0 129px 20px;
+	padding-top: 20px;
+	color: #fff;
+	text-shadow: 7px 0px 3px #00447a;
+}
+#describe p a{
+	display: block;
+	width: 230px;
+	height: 45px;
+	border: 2px solid #fff;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	font-size: 36px;
+	margin-left: 16px;
+}
+#describe p a:hover{
+	background: #fff;
+	color: #006298;
+	-webkit-transition: .5s ease-in-out;
+}
+.rank{
+	height: 13px;
+	background: url(../images/rank.png) no-repeat left 100%;
+	position: absolute;
+	left: 280px;
+	bottom: 25px;
+}
+.rank5{
+	width: 87px;
+}
+.rank4{
+	width: 70px;
+}
+.rank3{
+	width: 50px;
+}
+.rank2{
+	width: 34px;
+}
+.rank1{
+	width: 17px;
+}
+#showBox{
+	width: 1470px;
+}
+#showBox li{
+	width: 245px;
+	height: 305px;
+	background: #fff;
+	float: left;
+	text-align: center;
+}
+#section3{
+	margin: 0 auto;
+	background: #0b56ac;
+	padding: 87px 0 105px 0;
+	position: relative;
+}
+#section3::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 837px;
+	background: url(../images/background.gif) no-repeat left;
+	position: absolute;
+	top: 0;
+}
+#section3::before{
+	content: '';
+	display: block;
+	width: 980px;
+	height: 116px;
+	border-bottom: 1px solid #fff;
+	background: url(../images/preview.png) no-repeat center ;
+	position: absolute;
+	top: -41px;
+	left: 50%;
+	margin-left: -490px;
+	z-index: 999;
+}
+#news_wrapper{
+	margin: 0 auto;
+	width: 860px;
+	position: relative;
+	z-index: 999;
+}
+#section3 ul{
+	float: left;
+}
+#section3 li{
+	width: 215px;
+	height: 215px;
+}
+.shortcut{
+	background: #fff;
+	overflow: hidden;
+}
+.shortcut h1{
+	color: #9d9d9d;
+	font-size: 24px;
+	padding: 21px 21px 10px 21px;
+}
+.shortcut h2{
+	display: inline;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 23px;
+	padding: 5px;
+}
+.shortcut p{
+	text-indent: 2em;
+	margin: 21px;
+	text-overflow: ellipsis;
+	display: -webkit-box;  
+    -webkit-line-clamp: 4;  
+    -webkit-box-orient: vertical; 
+    font-size: 14px;
+    color: #9d9d9d;
+}
+.hot{background: red!important;}
+#cooperator{
+	position: relative;
+}
+#cooperator>div{
+	float: left;
+}
+#intro{
+	width: 33%;
+}
+#intro h1{
+	text-align: center;
+	height: 108px;
+}
+#intro h1 img{
+	margin-top: 23px;
+}
+#intro p{
+	text-indent: 2em;
+	color: #0a55ab;
+	font-size: 17px;
+	margin: 5px 50px;
+}
+#intro p:last-child{
+	margin-bottom: 40px;
+}
+#addr{
+	width: 67%;
+	position: relative;
+	padding-top: 52px;
+}
+#addr hgroup{
+	width: 38%;
+	color: #0a55ab;
+	position: absolute;
+	right: 10px;
+	bottom: 80px;	
+	padding: 20px 10px;
+	background: rgba(238,238,238,0.7);
+}
+#addr h1{
+	font-size: 18px;
+	font-weight: lighter;
+}
+#addr h2{
+	font-size: 16px;
+	margin: .3em 0;
+}
+#addr h3{
+	font-size: 14px;
+}
+#cooperator::before{
+	content: '';
+	display: block;
+	width: 980px;
+	height: 116px;
+	background: url(../images/aboutus.png) no-repeat center ;
+	position: absolute;
+	top: -59px;
+	left: 50%;
+	margin-left: -490px;
+	z-index: 999;
+}
+footer{
+	height: 111px;
+	background: #1f2228;
+	color: #eee;
+}
+#shareBox{
+	width: 174px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
