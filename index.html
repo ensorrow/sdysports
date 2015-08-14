@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>思迪亚体育</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/share.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullScreenSlider.css">
 </head>
 <body>
@@ -202,15 +203,18 @@
 		<p style="clear:both;"></p>
 	</div>
 	<footer>
-		<p id="shareBox"></p>
+		<div id="sns">			
+			<a href="http://weibo.com/u/5642419086" target="_blank" class="sns_weibo"></a>
+			<a href="#" class="sns_weixin"></a>
+	  		<div id="weixin_code"></div>
+		</div>
 	</footer>
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullScreenSlider.js"></script>
-<script type="text/javascript" src="js/shareTools.js"></script>
-<script type="text/javascript">
-	$(window).fullScreenSlider();
-	$("#shareBox").shareTools();
-</script>
 <script type="text/javascript" src="js/section2.js"></script>
+<script type="text/javascript" src="js/share.js"></script>
+<script>
+	$(window).fullScreenSlider();
+</script>
 </html>

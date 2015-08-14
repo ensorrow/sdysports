@@ -149,7 +149,6 @@
 					dotNum=currentPic-1;
 				}
 				dot.children("li").eq(dotNum).addClass("mos-dot-active").siblings().removeClass("mos-dot-active");
-				console.log(dotNum + ' ' + currentPic);
 				
 			}
 			//自动滚动
