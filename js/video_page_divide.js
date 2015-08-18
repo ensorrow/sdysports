@@ -9,8 +9,8 @@ $(function(){
 			num_display_entries: 4, //主体页数			
 			items_per_page: 2, //每页显示1项
 			callback: pageselectCallback,
-			prev_text: "前一页",
-			next_text: "后一页"
+			prev_text: "<",
+			next_text: ">"
 		});
 	 };
 	 

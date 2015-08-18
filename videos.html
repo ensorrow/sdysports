@@ -6,72 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="css/share.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/pagination.css">
-	<link type="text/css" href="css/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/video.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.pagination.js"></script>
-	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>	
 	<script type="text/javascript" src="js/video_page_divide.js"></script>
-	<script type="text/javascript">
-		 $(document).ready(function(){
-	      $("#jquery_jplayer_1").jPlayer({
-	        ready: function () {
-	          $(this).jPlayer("setMedia", {
-	            title: "思迪亚体育",
-	            m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-	            ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-	            poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-	          }).bind($.jPlayer.event.play,function(){
-	          	$(this).jPlayer("pauseOthers");
-	          });
-	        },
-	        cssSelectorAncestor: "#jp_container_1",
-	        swfPath: "/js",
-	        supplied: "m4v, ogv",
-	        useStateClassSkin: true,
-	        autoBlur: false,
-	        smoothPlayBar: true,
-	        keyEnabled: true,
-	        remainingDuration: true,
-	        toggleDuration: true,
-	        size:{
-	        	width:'553px',
-	        	height:'332px'
-	        },
-	        autohide:{
-	        	restored:true
-	        }
-	      });
-	      $("#jquery_jplayer_2").jPlayer({
-	        ready: function () {
-	          $(this).jPlayer("setMedia", {
-	            title: "思迪亚体育",
-	            m4v: "videos/video_demo1.mp4",           
-	            poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-	          }).bind($.jPlayer.event.play,function(){
-	          	$(this).jPlayer("pauseOthers");
-	          });
-	        },
-	        cssSelectorAncestor: "#jp_container_2",
-	        swfPath: "/js",
-	        supplied: "m4v",
-	        useStateClassSkin: true,
-	        autoBlur: false,
-	        smoothPlayBar: true,
-	        keyEnabled: true,
-	        remainingDuration: true,
-	        toggleDuration: true,
-	        size:{
-	        	width:'553px',
-	        	height:'332px'
-	        },
-	        autohide:{
-	        	restored:true
-	        }
-	      });
-	    });
-	</script>
-	
 </head>
 <body>
 	<div id="fixed_bg"></div>
