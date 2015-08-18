@@ -56,20 +56,44 @@ a:hover{
  	-webkit-transition:.5s all;
 }
 #nav2{
-	width: 860px;
+	width: 906px;
 	height: 52px;
 	background-color: #bed9ec;
 	margin: 0 auto;
-	padding: 0 60px;
+	padding: 0 14px 0 60px;	
+}
+#nav2 #indicator{
+	color: #006bb9;
+	line-height: 52px;
+	font-size: 14px;
+	float: left;
+	position: relative;
+	width: 98px;
+	text-align: center;
+}
+#indicator:after{
+	content: '';
+	display: block;
+	border: 8px solid rgba(190,217,236,0);
+	border-top-color: rgba(190,217,236,1);
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 52px;
+}
+#nav2 ul{
+	float: right;
 }
 #nav2 li{
 	float: left;
-}
-#nav2 a{
-	color: #006bb9;
 	line-height: 52px;
-	padding-right: 56px;
-	font-size: 14px;
+	padding: 0 5px;
+	color: #006bb9;
+	font-size: 12px;
+}
+#nav2 li a{
+	color: #006bb9;
+	font-size: 12px;
 }
 #nav2 a:hover{
 	text-decoration: underline;
@@ -83,7 +107,7 @@ a:hover{
 	width: 980px;
 	margin: 20px auto;
 }
-#main li{
+#main>ul>li{
 	width: 100%;
 	height: 250px;
 	margin-bottom: 30px;

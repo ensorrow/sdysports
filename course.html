@@ -5,6 +5,11 @@
 	<title>思迪亚课程计划</title>
 	<link rel="stylesheet" type="text/css" href="css/course.css">
 	<link rel="stylesheet" type="text/css" href="css/share.css">
+	<link rel="stylesheet" type="text/css" href="css/pagination.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/share.js"></script>
+	<script type="text/javascript" src="js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="js/course_page_divide.js"></script>
 </head>
 <body>
 	<div id="fixed_bg"></div>
@@ -21,44 +26,21 @@
 				<div style="clear:both;"></div>			
 			</ul>
 		</nav>
-		<ul id="nav2">
-			<li><a href="#" class="active">幼儿篮球</a></li>
-			<li><a href="#">少儿篮球</a></li>
-			<li><a href="#">青少年篮球</a></li>
-			<li><a href="#">思迪亚游学计划</a></li>
-		</ul>		
+		<div id="nav2">
+			<span id="indicator">思迪亚课程计划</span>
+			<ul>
+				<li><a href="#">思迪亚课程计划</a></li>
+				<li><a href="#">xxx</a></li>				
+			</ul>
+			<ul style="display:none;" id="hid"><li>/</li></ul>
+		</div>		
 	</header>
 	<div id="main">
-		<ul>
-			<li>
-				<img src="images/set1.gif">
-				<h1>幼儿篮球</h1>
-				<h2>招生范围：4 - 6岁</h2>
-				<p> 让热爱篮球的青少年儿童更深切的体会篮球这项运动，提高自身的身体素质，同时孩子在成长期促进身体发育，也为今后的体育运动打下良好的基础。快乐篮球会根据孩子的具体情况进行量身打造训练计划，在孩子青少年阶段主要提高孩子的球性、协调性、柔韧性、灵活性等为主。</p>
-				<a href="#" class="learn_more">了解详情</a>
-			</li>
-			<li>
-				<img src="images/set1.gif">
-				<h1>少儿篮球</h1>
-				<h2>招生范围：4 - 6岁</h2>
-				<p> 让热爱篮球的青少年儿童更深切的体会篮球这项运动，提高自身的身体素质，同时孩子在成长期促进身体发育，也为今后的体育运动打下良好的基础。快乐篮球会根据孩子的具体情况进行量身打造训练计划，在孩子青少年阶段主要提高孩子的球性、协调性、柔韧性、灵活性等为主。</p>
-				<a href="#" class="learn_more">了解详情</a>
-			</li>
-			<li>
-				<img src="images/set1.gif">
-				<h1>青少年篮球</h1>
-				<h2>招生范围：4 - 6岁</h2>
-				<p> 让热爱篮球的青少年儿童更深切的体会篮球这项运动，提高自身的身体素质，同时孩子在成长期促进身体发育，也为今后的体育运动打下良好的基础。快乐篮球会根据孩子的具体情况进行量身打造训练计划，在孩子青少年阶段主要提高孩子的球性、协调性、柔韧性、灵活性等为主。</p>
-				<a href="#" class="learn_more">了解详情</a>
-			</li>
-			<li>
-				<img src="images/set1.gif">
-				<h1>思迪亚游学计划</h1>
-				<h2>招生范围：4 - 6岁</h2>
-				<p> 让热爱篮球的青少年儿童更深切的体会篮球这项运动，提高自身的身体素质，同时孩子在成长期促进身体发育，也为今后的体育运动打下良好的基础。快乐篮球会根据孩子的具体情况进行量身打造训练计划，在孩子青少年阶段主要提高孩子的球性、协调性、柔韧性、灵活性等为主。</p>
-				<a href="#" class="learn_more">了解详情</a>
-			</li>
+		<ul id="list" class="m-pagination">
+			
 		</ul>
+		<ul id="hidden_result" style="display:none;"></ul>
+		<div id="Pagination" class="pagination"></div>
 	</div>
 	<footer>
 		<div id="sns">			
@@ -68,6 +50,13 @@
 		</div>
 	</footer>
 </body>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/share.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nav2num = $('#nav2 li').length;
+		console.log(nav2num);
+		for(var i=1;i<nav2num;i++){
+			$('#hid li').insertBefore($('#nav2 li').eq(i));
+		}
+	});
+</script>
 </html>
