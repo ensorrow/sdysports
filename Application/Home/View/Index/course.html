@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>思迪亚课程计划</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/course.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/share.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/pagination.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/share.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/course_page_divide.js"></script>
+</head>
+<body>
+	<div id="fixed_bg"></div>
+	<header>
+		<nav>
+			<img src="__PUBLIC__/images/logo.gif">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="#">思迪亚体育联盟</a></li>
+				<li><a href="#">思迪亚课程计划</a></li>
+				<li><a href="#">思迪亚梦工厂</a></li>
+				<li><a href="#">思迪亚在中国</a></li>
+				<li><a href="#">关于思迪亚</a></li>
+				<div style="clear:both;"></div>			
+			</ul>
+		</nav>
+		<div id="nav2">
+			<span id="indicator">思迪亚课程计划</span>
+			<ul>
+				<li><a href="#">思迪亚课程计划</a></li>
+				<li><a href="#">xxx</a></li>				
+			</ul>
+			<ul style="display:none;" id="hid"><li>/</li></ul>
+		</div>		
+	</header>
+	<div id="main">
+		<ul id="list" class="m-pagination">
+			
+		</ul>
+		<ul id="hidden_result" style="display:none;"></ul>
+		<div id="Pagination" class="pagination"></div>
+	</div>
+	<footer>
+		<div id="sns">			
+			<a href="http://weibo.com/u/5642419086" target="_blank" class="sns_weibo"></a>
+			<a href="#" class="sns_weixin"></a>
+	  		<div id="weixin_code"></div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nav2num = $('#nav2 li').length;
+		console.log(nav2num);
+		for(var i=1;i<nav2num;i++){
+			$('#hid li').insertBefore($('#nav2 li').eq(i));
+		}
+	});
+</script>
+</html>

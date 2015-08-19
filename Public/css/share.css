@@ -1,0 +1,8 @@
+#sns {  width:145px;  height:60px; margin: 0 auto;  padding-top:16px; }
+#weixin_code{width:150px; height:150px;  position:relative; top:-180px; left:40px; z-index:99999999; display:none; background-image:url(../images/weixin_code.jpg); border:solid #999 1px;}
+.sns_weibo { display:block; float:left; width:64px; height:64px; background-image:url(../images/sns-weibo-g.png); background-position:top 2px; }
+.sns_weibo:hover{ display:block; float:left;  width:64px; height:64px; background-image:url(../images/sns-weibo.png); }
+.sns_qq { display:block;  float:left; width:64px; height:64px; background-image:url(../images/sns-qq-g.png); background-position:top 2px; margin-left:10px;}
+.sns_qq:hover{ display:block; float:left;  width:64px;  height:64px; background-image:url(../images/sns-qq.png);margin-left:10px;}
+.sns_weixin { display:block; float:left;  width:64px; height:64px; background-image:url(../images/sns-weixin-g.png); background-position:top 2px; margin-left:10px;}
+.sns_weixin:hover{ display:block; float:left;  width:64px; height:64px; background-image:url(../images/sns-weixin.png); margin-left:10px;}
