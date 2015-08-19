@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>思迪亚课程计划</title>
+	<link rel="stylesheet" type="text/css" href="css/share.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/pagination.css">
+	<link rel="stylesheet" type="text/css" href="css/news_list.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="js/news_page_divide.js"></script>
+</head>
+<body>
+	<div id="fixed_bg"></div>
+	<header>
+		<nav>
+			<img src="images/logo.gif">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">思迪亚体育联盟</a></li>
+				<li><a href="#">思迪亚课程计划</a></li>
+				<li><a href="#">思迪亚梦工厂</a></li>
+				<li><a href="#">思迪亚在中国</a></li>
+				<li><a href="#">关于思迪亚</a></li>
+				<div style="clear:both;"></div>			
+			</ul>
+		</nav>
+		<div id="nav2">
+			<span id="indicator">育星篮球俱乐部</span>
+			<ul>
+				<li><a href="#">思迪亚体育联盟</a></li>
+				<li><a href="#">育星篮球俱乐部</a></li>				
+			</ul>
+			<ul style="display:none;" id="hid"><li>/</li></ul>
+		</div>		
+	</header>
+	<div id="main">
+		<div id="intro">
+			<img src="images/logo_trans.gif">
+			<p>思迪亚团队坚持以青少年体育教育为中心，以奋斗者为本，基于青少年成长需求持续创新，自主开发适合青少年德智体美全方发展的培训课程，通过实践赢得了众多学生及家长的青睐。在国内外同行业交流会上，我们独立创新的培训课程在体育培训机构中得到肯定。</p>
+      		<p>在青少年体育教育为核心基础上，我们放眼世界，2012年受到NBA中国的关注，帮助其在中国完成中国赛及篮球训练营等相关赛事及活动。与NBA中国良好合作背景下，我们还帮助Adidas、Nike、李宁、匹克等国内外知名体育产业公司完成赛事活动，都获得了非常高的评价。 </p>
+      		<p>2015年思迪亚更是与西城区体育局育星俱乐部强强联手，不断突破，通过同北京体育大学，美国知名高校的不断交流研究，合力打造最适合中国青少年健康成长的篮球培训课程，真正做到体育，心理，文化共同发展的专属课程。</p>
+		</div>
+		<ul id="hidden_result" style="display:none;"></ul>
+		<ul id="news_list">
+			
+		</ul>
+		<div id="Pagination" class="pagination"></div>
+	</div>
+	<footer>
+		<div id="sns">			
+			<a href="http://weibo.com/u/5642419086" target="_blank" class="sns_weibo"></a>
+			<a href="#" class="sns_weixin"></a>
+	  		<div id="weixin_code"></div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="js/share.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nav2num = $('#nav2 li').length;
+		for(var i=1;i<nav2num;i++){
+			$('#hid li').insertBefore($('#nav2 li').eq(i));
+		}
+	});
+</script>
+</html>
