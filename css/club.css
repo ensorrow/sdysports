@@ -26,6 +26,8 @@
 	margin: 40px 36px;
 }
 #main article img:first-child{
+	display: block;
+	margin: 0 auto;
 	margin-bottom: 37px;
 }
 #main article img:last-child{
