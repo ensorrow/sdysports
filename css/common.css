@@ -2,7 +2,7 @@
 	margin:0;
 	padding: 0;
 	list-style: none;
-	font-family: 微软雅黑;
+	font-family: 微软雅黑,;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -57,14 +57,26 @@ nav img{
 	background: #0078c3;
 	text-align: center;
 	width: 120px;
-	margin: 0;
-	transform: rotate(90deg);
+	margin: 0;	
 	opacity: 0;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
 }
 #navbar>li:hover li{
-	transform: rotate(0deg);
 	opacity: 1;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);	
 	transition: opacity .4s, transform .5s;
+	-webkit-transition: opacity .4s, transform .5s;
+	-ms-transition: opacity .4s, transform .5s;
+	-moz-transition: opacity .4s, transform .5s;
+	-o-transition: opacity .4s, transform .5s;
 }
 #navbar .down_menu a{
 	display: block;
@@ -84,6 +96,9 @@ nav a{
 a:hover{
 	transition:.5s all;/*ie10*/
  	-webkit-transition:.5s all;
+ 	-moz-transition:.5s all;
+ 	-ms-transition:.5s all;
+ 	-o-transition:.5s all;
 }
 #nav2{
 	width: 906px;
