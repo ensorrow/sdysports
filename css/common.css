@@ -50,6 +50,7 @@ nav img{
 	top: 75px;
 	left: 50%;
 	margin-left: -60px;
+	z-index: 1001;
 }
 #navbar .down_menu li{
 	height: 30px;
@@ -67,9 +68,6 @@ nav img{
 	-ms-transition: opacity .4s;
 	-moz-transition: opacity .4s;
 	-o-transition: opacity .4s;
-}
-#navbar>li:hover ul{
-	transition: max-height 1.5s;
 }
 #navbar .down_menu a{
 	display: block;
