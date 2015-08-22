@@ -109,11 +109,15 @@ a:hover{
 	color: #fff;
 	font-size: 36px;
 	margin-left: 16px;
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
 }
 #describe p a:hover{
 	background: #fff;
-	color: #006298;
-	-webkit-transition: .5s ease-in-out;
+	color: #006298;	
 }
 .rank{
 	height: 13px;

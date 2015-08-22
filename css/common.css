@@ -59,24 +59,17 @@ nav img{
 	width: 120px;
 	margin: 0;	
 	opacity: 0;
-	transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
 }
 #navbar>li:hover li{
 	opacity: 1;
-	transform: rotate(0deg);
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	-o-transform: rotate(0deg);	
-	transition: opacity .4s, transform .5s;
-	-webkit-transition: opacity .4s, transform .5s;
-	-ms-transition: opacity .4s, transform .5s;
-	-moz-transition: opacity .4s, transform .5s;
-	-o-transition: opacity .4s, transform .5s;
+	transition: opacity .4s;
+	-webkit-transition: opacity .4s;
+	-ms-transition: opacity .4s;
+	-moz-transition: opacity .4s;
+	-o-transition: opacity .4s;
+}
+#navbar>li:hover ul{
+	transition: max-height 1.5s;
 }
 #navbar .down_menu a{
 	display: block;
@@ -173,118 +166,4 @@ footer{
 	width: 174px;
 	margin: 0 auto;
 	padding-top: 25px;
-}
-/* CSS3 delays for transition effects */
-#navbar>li:hover .down_menu li:nth-child(1) {
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-}
-#navbar>li:hover .down_menu li:nth-child(2) {
-    -webkit-transition-delay: 50ms;
-    -moz-transition-delay: 50ms;
-    -ms-transition-delay: 50ms;
-    -o-transition-delay: 50ms;
-    transition-delay: 50ms;
-}
-#navbar>li:hover .down_menu li:nth-child(3) {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    -ms-transition-delay: 100ms;
-    -o-transition-delay: 100ms;
-    transition-delay: 100ms;
-}
-#navbar>li:hover .down_menu li:nth-child(4) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms;
-}
-#navbar>li:hover .down_menu li:nth-child(5) {
-    -webkit-transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -ms-transition-delay: 200ms;
-    -o-transition-delay: 200ms;
-    transition-delay: 200ms;
-}
-#navbar>li:hover .down_menu li:nth-child(6) {
-    -webkit-transition-delay: 250ms;
-    -moz-transition-delay: 250ms;
-    -ms-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms;
-}
-#navbar>li:hover .down_menu li:nth-child(7) {
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    -ms-transition-delay: 300ms;
-    -o-transition-delay: 300ms;
-    transition-delay: 300ms;
-}
-#navbar>li:hover .down_menu li:nth-child(8) {
-    -webkit-transition-delay: 350ms;
-    -moz-transition-delay: 350ms;
-    -ms-transition-delay: 350ms;
-    -o-transition-delay: 350ms;
-    transition-delay: 350ms;
-}
-
-.down_menu li:nth-child(1) {
-    -webkit-transition-delay: 350ms;
-    -moz-transition-delay: 350ms;
-    -ms-transition-delay: 350ms;
-    -o-transition-delay: 350ms;
-    transition-delay: 350ms;
-}
-.down_menu li:nth-child(2) {
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    -ms-transition-delay: 300ms;
-    -o-transition-delay: 300ms;
-    transition-delay: 300ms;
-}
-.down_menu li:nth-child(3) {
-    -webkit-transition-delay: 250ms;
-    -moz-transition-delay: 250ms;
-    -ms-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms;
-}
-.down_menu li:nth-child(4) {
-    -webkit-transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -ms-transition-delay: 200ms;
-    -o-transition-delay: 200ms;
-    transition-delay: 200ms;
-}
-.down_menu li:nth-child(5) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms;
-}
-.down_menu li:nth-child(6) {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    -ms-transition-delay: 100ms;
-    -o-transition-delay: 100ms;
-    transition-delay: 100ms;
-}
-.down_menu li:nth-child(7) {
-    -webkit-transition-delay: 50ms;
-    -moz-transition-delay: 50ms;
-    -ms-transition-delay: 50ms;
-    -o-transition-delay: 50ms;
-    transition-delay: 50ms;
-}
-.down_menu li:nth-child(8) {
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
 }
