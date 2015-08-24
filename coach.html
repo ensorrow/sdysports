@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>思迪亚课程计划</title>
+	<link rel="stylesheet" type="text/css" href="css/share.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/coach.css">
+	<link rel="stylesheet" type="text/css" href="css/pagination.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/share.js"></script>
+	<script type="text/javascript" src="js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="js/coach_page_divide.js"></script>
+	<!--[if IE]>
+	<script type="text/javascript" src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="fixed_bg"></div>
+	<header>
+		<nav>
+			<img src="images/logo.gif">
+			<ul id="navbar">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="#">思迪亚体育联盟</a>
+					<ul class="down_menu">
+						<li><a href="club.html">育星篮球俱乐部</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="course.html">思迪亚课程计划</a>
+					<ul class="down_menu">
+						<li><a href="#">快乐篮球</a></li>
+						<li><a href="#">激情篮球</a></li>
+						<li><a href="#">中考篮球</a></li>
+						<li><a href="#">定向篮球</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">思迪亚梦工厂</a>
+					<ul class="down_menu">
+						<li><a href="members.html">学员天地</a></li>
+						<li><a href="videos.html">训练视频</a></li>						
+					</ul>
+				</li>
+				<li>
+					<a href="#">思迪亚在中国</a>
+					<ul class="down_menu">
+						<li><a href="news_list.html">思迪亚在中国</a></li>
+						<li><a href="#">韦德训练营</a></li>
+						<li><a href="#">思迪亚活动</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">关于思迪亚</a>
+					<ul class="down_menu">
+						<li><a href="coach">师资力量</a></li>
+						<li><a href="#">思迪亚资源</a></li>
+						<li><a href="#">招贤纳士</a></li>
+						<li><a href="#">常见问题解答</a></li>
+						<li><a href="aboutus.html">公司介绍</a></li>
+					</ul>
+				</li>
+				<div style="clear:both;"></div>
+			</ul>			
+		</nav>
+		<div id="nav2">
+			<span id="indicator">关于思迪亚</span>
+			<ul>
+				<li><a href="#">关于思迪亚</a></li>
+				<li><a href="#">师资力量</a></li>				
+			</ul>
+			<ul style="display:none;" id="hid"><li>/</li></ul>
+		</div>		
+	</header>
+	<div id="main">
+		<ul id="list" class="m-pagination">
+			
+		</ul>
+		<ul id="hidden_result" style="display:none;"></ul>
+		<div id="Pagination" class="pagination"></div>
+	</div>
+	<footer>
+		<div id="sns">			
+			<a href="http://weibo.com/u/5642419086" target="_blank" class="sns_weibo"></a>
+			<a href="#" class="sns_weixin"></a>
+	  		<div id="weixin_code"></div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nav2num = $('#nav2 li').length;
+		console.log(nav2num);
+		for(var i=1;i<nav2num;i++){
+			$('#hid li').insertBefore($('#nav2 li').eq(i));
+		}
+	});
+</script>
+</html>

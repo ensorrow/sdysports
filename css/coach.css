@@ -1,0 +1,77 @@
+#list>li{
+	height: 260px;
+	overflow: hidden;
+}
+#list li div{
+	width: 685px;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+#list>li a{
+	color: #fff;
+}
+#list>li a:hover{
+	text-decoration: underline;
+}
+#list img{
+	float: left;
+	width: 260px;
+	margin-right: 35px;
+}
+#main{
+	width: 980px;
+	margin: 20px auto;
+}
+#main>ul>li{
+	width: 100%;
+	height: 250px;
+	margin-bottom: 30px;
+	background-color: rgba(255,255,255,0.3);
+	overflow: hidden;
+	color: #fff;
+}
+#list h1{
+	font-size: 24px;
+	display: inline-block;
+	margin-top: 12px;
+	padding-bottom: 34px;
+}
+.rank{
+	height: 24px;
+	background: url(../images/rank2.png) no-repeat left 100%;
+	display: inline-block;
+	margin-left: 15px;
+}
+.rank5{
+	width: 125px;
+}
+.rank4{
+	width: 100px;
+}
+.rank3{
+	width: 75px;
+}
+.rank2{
+	width: 50px;
+}
+.rank1{
+	width: 25px;
+}
+#list li ul:before{
+	content: '执教经历：';
+	display:block;
+	margin-bottom: 24px;
+}
+#list li ul{
+	height: 110px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow-y: scroll;
+}
+#list p{
+	line-height: 1.3;
+}

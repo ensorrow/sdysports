@@ -32,28 +32,69 @@ nav img{
 	margin-left: 44px;
 	float: left;
 }
-nav ul{
+#navbar{
 	width: 810px;
 	float: left;
 }
-nav li{
+#navbar li{
 	float: left;
 	margin-left: 18px;
 	height: 76px;
 	line-height: 76px;
+	position: relative;
+}
+.down_menu{
+	max-height: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 75px;
+	left: 50%;
+	margin-left: -60px;
+	z-index: 1001;
+	box-shadow: 0px -2px 1px #08598b;
+	-webkit-box-shadow: 0px -2px 1px #08598b;
+	-moz-box-shadow: 0px -2px 1px #08598b;
+	-ms-box-shadow: 0px -2px 1px #08598b;
+	width: 120px;
+}
+#navbar .down_menu li{
+	height: 30px;
+	line-height: 30px;
+	background: #0078c3;
+	text-align: center;
+	width: 120px;
+	margin: 0;	
+	opacity: 0;
+}
+#navbar>li:hover li{
+	opacity: 1;
+	transition: opacity .4s;
+	-webkit-transition: opacity .4s;
+	-ms-transition: opacity .4s;
+	-moz-transition: opacity .4s;
+	-o-transition: opacity .4s;
+}
+#navbar .down_menu a{
+	display: block;
+	padding: 0;
 }
 nav a{
 	padding: 5px 13px;
 	border:0;
-	border-radius: 8px;	
 	color: #fff;
 }
-nav a:hover{
-	background-color: #00195b;
+#navbar a:hover{
+	background-color: #085789;
+}
+#navbar>li:hover>ul{
+	max-height: 500px;
 }
 a:hover{
 	transition:.5s all;/*ie10*/
  	-webkit-transition:.5s all;
+ 	-moz-transition:.5s all;
+ 	-ms-transition:.5s all;
+ 	-o-transition:.5s all;
 }
 #nav2{
 	width: 906px;
@@ -68,6 +109,8 @@ a:hover{
 	font-size: 14px;
 	float: left;
 	position: relative;
+	width: 98px;
+	text-align: center;
 }
 #indicator:after{
 	content: '';
@@ -112,8 +155,8 @@ a:hover{
 	border: 8px solid rgba(190,217,236,0);
 	border-top-color: #006bb9;
 	position: absolute;
-	left: 109px;
 	margin-left: -8px;
+	left: 109px;
 	top: 0px;
 }
 footer{

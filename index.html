@@ -6,21 +6,62 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/share.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullScreenSlider.css">
+	<!--[if IE]>
+	<script type="text/javascript" src="js/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
 	<header>
 		<nav>
 			<img src="images/logo.gif">
-			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">思迪亚体育联盟</a></li>
-				<li><a href="course.html">思迪亚课程计划</a></li>
-				<li><a href="#">思迪亚梦工厂</a></li>
-				<li><a href="#">思迪亚在中国</a></li>
-				<li><a href="#">关于思迪亚</a></li>
-				<div style="clear:both;"></div>			
-			</ul>
-		</nav>
+			<ul id="navbar">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="#">思迪亚体育联盟</a>
+					<ul class="down_menu">
+						<li><a href="club.html">育星篮球俱乐部</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="course.html">思迪亚课程计划</a>
+					<ul class="down_menu">
+						<li><a href="#">快乐篮球</a></li>
+						<li><a href="#">激情篮球</a></li>
+						<li><a href="#">中考篮球</a></li>
+						<li><a href="#">定向篮球</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">思迪亚梦工厂</a>
+					<ul class="down_menu">
+						<li><a href="members.html">学员天地</a></li>
+						<li><a href="videos.html">训练视频</a></li>						
+					</ul>
+				</li>
+				<li>
+					<a href="#">思迪亚在中国</a>
+					<ul class="down_menu">
+						<li><a href="news_list.html">思迪亚在中国</a></li>
+						<li><a href="#">韦德训练营</a></li>
+						<li><a href="#">思迪亚活动</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">关于思迪亚</a>
+					<ul class="down_menu">
+						<li><a href="coach.html">师资力量</a></li>
+						<li><a href="#">思迪亚资源</a></li>
+						<li><a href="#">招贤纳士</a></li>
+						<li><a href="#">常见问题解答</a></li>
+						<li><a href="aboutus.html">公司介绍</a></li>
+					</ul>
+				</li>
+				<div style="clear:both;"></div>
+			</ul>			
+		</nav>		
 		<div id="slider">
 			<ul class="slider">
 				<li>
@@ -60,6 +101,10 @@
 				</li>
 			</ul>
 		</div>
+		<script type="text/javascript" src="js/jquery.fullScreenSlider.js"></script>
+		<script>
+			$(window).fullScreenSlider();
+		</script>
 	</header>
 	<div id="section2">
 		<ul id="describe">
@@ -106,16 +151,16 @@
 		</ul>
 		<ul id="showBox">
 			<li>
-				<a href="#"><img src="images/show1.jpg"></a>
+				<img src="images/show1.jpg">
 			</li>
 			<li>
-				<a href="#"><img src="images/show2.jpg"></a>
+				<img src="images/show2.jpg">
 			</li>
 			<li>
-				<a href="#"><img src="images/show3.jpg"></a>
+				<img src="images/show3.jpg">
 			</li>
 			<li>
-				<a href="#"><img src="images/show4.jpg"></a>
+				<img src="images/show4.jpg">
 			</li>			
 		</ul>
 	</div>
@@ -174,7 +219,8 @@
 				</li>
 			</ul>
 			<div style="clear:both;"></div>
-		</div>		
+		</div>
+		<img src="images/refresh.png" id="refresh">
 	</div>
 	<div id="cooperator">
 		<div id="intro">
@@ -210,11 +256,6 @@
 		</div>
 	</footer>
 </body>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullScreenSlider.js"></script>
 <script type="text/javascript" src="js/section2.js"></script>
 <script type="text/javascript" src="js/share.js"></script>
-<script>
-	$(window).fullScreenSlider();
-</script>
 </html>
