@@ -21,11 +21,13 @@
 }
 #main li h2{
 	font-size: 14px;
-	margin: 38px 0 25px 0;
+	margin: 28px 0 15px 0;
 }
 #main li p{
 	font-size: 14px;
 	margin-right: 24px;
+	max-height: 80px;
+	overflow: hidden;
 }
 .learn_more{
 	padding: 10px 35px;
@@ -35,7 +37,7 @@
 	float: right;
 	clear: right;
 	color: #fff;
-	margin: 30px 24px;
+	margin: 20px 24px;
 }
 .learn_more:hover{
 	color: #76caca;

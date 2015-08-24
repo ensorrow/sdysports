@@ -64,11 +64,13 @@
 	margin-bottom: 24px;
 }
 #list li ul{
-	height: 93px;
+	height: 110px;
 	overflow: hidden;
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	width: 100%;
+	overflow-y: scroll;
 }
 #list p{
 	line-height: 1.3;
