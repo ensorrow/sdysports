@@ -1,0 +1,20 @@
+	<footer>
+		<div id="sns">			
+			<a href="http://weibo.com/u/5642419086" target="_blank" class="sns_weibo"></a>
+			<a href="#" class="sns_weixin"></a>
+	  		<div id="weixin_code"></div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/share.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nav2num = $('#nav2 li').length;
+		console.log(nav2num);
+		for(var i=1;i<nav2num;i++){
+			$('#hid li').insertBefore($('#nav2 li').eq(i));
+		}
+	});
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>思迪亚课程计划</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/share.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/common.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/coach.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/pagination.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/share.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.pagination.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/coach_page_divide.js"></script>
+	<!--[if IE]>
+	<script type="text/javascript" src="__PUBLIC__/js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="fixed_bg"></div>
+<include file="Public/header" />
+	<div id="main">
+		<ul id="list" class="m-pagination">
+			<include file="Index/load_coach" />
+		</ul>
+		<ul id="hidden_result" style="display:none;"></ul>
+		<div id="Pagination" class="pagination"></div>
+	</div>
+<include file="Public/footer" />

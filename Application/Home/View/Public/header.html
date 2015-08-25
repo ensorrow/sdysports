@@ -1,0 +1,31 @@
+	<header>
+		<nav>
+			<img src="__PUBLIC__/images/logo.gif">
+			<ul id="navbar">
+				<li>
+					<a href="{:U('index')}">首页</a>
+				</li>
+				<volist name="columns" id="vo" ><eq name="vo['fid']" value="0" >
+				<li>
+				 <a href="{:U('showContent')}?cid={$vo.cid}">{$vo.name}</a>
+				 <ul class="down_menu" >
+				    <volist name="columns" id="voc"><eq name="voc['fid']" value="$vo['cid']" >
+				    <li>
+				        <a href="{:U('showContent')}?cid={$voc.cid}">{$voc.name}</a>
+				    </li>
+				    </eq></volist>
+				 </ul>
+				</li>
+				</eq></volist>
+				<div style="clear:both;"></div>
+			</ul>			
+		</nav>
+		<div id="nav2">
+			<span id="indicator">{$column['name']}</span>
+			<ul>
+				<li><a href="{:U('showContent')}?cid={$column['fc']['cid']}">{$column['fc']['name']}</a></li>
+				<li><a href="{:U('showContent')}?cid={$column['cid']}">{$column['name']}</a></li>				
+			</ul>
+			<ul style="display:none;" id="hid"><li>/</li></ul>
+		</div>		
+	</header>

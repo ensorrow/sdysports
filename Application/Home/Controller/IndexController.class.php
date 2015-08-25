@@ -3,6 +3,35 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover,{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+        $mCloumn = M('Column');
+        $columns = $mCloumn->select();
+        $this->assign('columns',$columns);
+        $this->display();
+    }
+    public function showContent(){
+        $mColumn = M('Column');
+        $column = $mColumn->where(I('get.'))->find();
+        if(!$column) $this->error('没有此页面！');
+        else {
+            switch($column['type']) {
+            case C('TYPE_ARTICLE') :
+                //$this->display($column['path']);
+                break;
+            case C('TYPE_VIDEO') :
+                $mVideo = M('Video');
+                $count = $mVideo->count();
+                $Page = new \Think\Page($count,20);
+                $show = $Page->show();
+                $list = $mVideo->order('vid desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+                $this->assign('list',$list);
+                $this->assign('page',$show);
+                break;
+            }
+            $columns = $mColumn->select();
+            $column['fc'] = $mColumn->where('cid ='.$column['fid'])->find();
+            $this->assign('columns',$columns);
+            $this->assign('column',$column);
+            $this->display($column['path']);
+        }
     }
 }
