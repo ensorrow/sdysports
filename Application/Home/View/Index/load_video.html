@@ -1,0 +1,14 @@
+
+	<volist name="vList" id="vo">
+	<li>
+		<h4 class="float_icon">{$vo.time|date="M",###}<span>{$vo.time|date="d",###}</span></h4>
+		<img src="__PUBLIC__/images/videotype.png" class="float_icon">
+		<div class="video_wrap">
+			<video src="{$vo.path}" width="553" height="350" controls autobuffer>请升级你的浏览器！（如谷歌浏览器，火狐浏览器，360浏览器！）</video>
+		</div>
+		<h1>{$vo.title}</h1>
+		<span class="times">{$vo.hit}</span>
+		<h2>新手在场上如何做好防守？最后三分钟应如何调节心态？如何避免被绝杀?</h2>
+	</li>
+	</volist>
+

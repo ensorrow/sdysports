@@ -16,11 +16,11 @@ $(function(){
 	 
 	function pageselectCallback(page_index,jq){
 		var max_elem = Math.min((page_index+1) * 8, length);
-		$("#news_list").empty();
+		$($('#ul').val()).empty();
 		for(var i=page_index*items_per_page;i<page_index*items_per_page+items_per_page;i++){
-			$("#hidden_result li:eq("+i+")").clone().appendTo('#news_list');
+			$("#hidden_result li:eq("+i+")").clone().appendTo($('#ul').val());
 		}
 		return false;
 	}	
-	$("#hidden_result").load("load_news.html", null, initPagination);
+	$("#hidden_result").load($('#load').val(), {val: true}, initPagination);
 });

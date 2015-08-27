@@ -2,14 +2,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>视频发布</title>
+	<title>{$title}</title>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/share.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/common.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/pagination.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/video.css">
 	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/js/jquery.pagination.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/js/video_page_divide.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/page_divide.js"></script>
 	<!--[if IE]>
 	<script type="text/javascript" src="__PUBLIC__/js/html5.js"></script>
 	<![endif]-->
@@ -23,24 +23,16 @@
 		</ul>
 		<ul id="hidden_result" style="display:none;"></ul>
 		<ul id="side_bar">
+			<volist name="vList" id="vo" >
 			<li>
-				<a href="#"><h1>2014-2015 CBA联赛总决赛精彩进球</h1></a>
-				<span>2015年6月21日</span>
+			<a href="{:U('showContent')}?cid={$column.cid}&id={$vo.id}" ><h1>{$vo.title}</h1></a>
+			<span>{$vo.time|date="Y年m月d日"}</span>
 			</li>
-			<li>
-				<a href="#"><h1>2014-2015 CBA联赛总决赛精彩进球</h1></a>
-				<span>2015年6月21日</span>
-			</li>
-			<li>
-				<a href="#"><h1>2014-2015 CBA联赛总决赛精彩进球</h1></a>
-				<span>2015年6月21日</span>
-			</li>
-			<li>
-				<a href="#"><h1>2014-2015 CBA联赛总决赛精彩进球</h1></a>
-				<span>2015年6月21日</span>
-			</li>
+			</volist>
 		</ul>
 		<div style="clear:both;"></div>
 		<div id="Pagination" class="pagination"></div>
 	</div>
 <include file="Public/footer" />
+<input type="hidden" id="load" value="{:U('showContent')}?cid={$column.cid}&id={$Think.get.id}" />
+<input type="hidden" id="ul" value="#list" />

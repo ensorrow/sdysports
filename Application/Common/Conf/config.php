@@ -4,9 +4,9 @@ return array(
 	
 
 	//内容分类
-	'TYPE_ARTICLE' => 0,
-	'TYPE_LIST' => 1,
-	'TYPE_VIDEO' => 2,
+	'TYPE_ARTICLE' => 0,    //所有文字展示型
+	'TYPE_NORMAL' => 1,     //所有展示列表型
+	'TYPE_SPECIAL' => 2,    //所有其他内容，如视频和定制页面
 	
 	//数据库配置
 	'DB_TYPE' => 'mysql',
