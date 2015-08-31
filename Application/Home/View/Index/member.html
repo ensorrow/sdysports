@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>思迪亚课程计划</title>
+	<title>{$title}</title>
 	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
 	<script type="text/javascript" src="__PUBLIC__/js/jquery.mousewheel-3.0.6.pack.js"></script>
 	<!-- Add fancyBox main JS and CSS files -->
@@ -30,16 +30,16 @@
 		<div id="splendid">
 			<div id="wra_1">
 				<div id="header_wra_1">
-					<img src="__PUBLIC__/images/header_sam.png">
-					<h1>张继科</h1>
+					<img src="{$member1.pic}">
+					<h1>{$member1.name}</h1>
 				</div>
-				<p>他是球场上的精灵，穿梭在球场的每一个角落，他是偶像学员，也是我最喜欢 的学员，我把他比作艾弗森，娴熟的运球、灵巧的转身、犀利的传球，出色的爆发力，造就了这个球场上无敌的王者，他可以砍瓜切菜般的去得分，但 是他从来不会这样去做，他更愿意去帮助队友得分，他是真正意义上的组织后卫。私下来他是一个安静的小男孩，有着腼腆的笑容，可是到了球场那就是另外一个样子了，球风凶狠训练刻苦，已经完全不像一个孩子了。</p>
+				<p>{$member1.content}</p>
 			</div>
 			<div id="wra_2">				
-				<p>他是球场上的精灵，穿梭在球场的每一个角落，他是偶像学员，也是我最喜欢 的学员，我把他比作艾弗森，娴熟的运球、灵巧的转身、犀利的传球，出色的爆发力，造就了这个球场上无敌的王者，他可以砍瓜切菜般的去得分，但 是他从来不会这样去做，他更愿意去帮助队友得分，他是真正意义上的组织后卫。私下来他是一个安静的小男孩，有着腼腆的笑容，可是到了球场那就是另外一个样子了，球风凶狠训练刻苦，已经完全不像一个孩子了。</p>
+				<p>{$member2.content}</p>
 				<div id="header_wra_2">
-					<img src="__PUBLIC__/images/header_sam.png">
-					<h1>张继科</h1>
+					<img src="{$member2.pic}">
+					<h1>{$member2.name}</h1>
 				</div>
 			</div>
 		</div>
@@ -54,3 +54,5 @@
 		</div>
 	</div>
 <include file="Public/footer" />
+<input type="hidden" id="load" value="{:U('showContent')}?cid={$column.cid}" />
+

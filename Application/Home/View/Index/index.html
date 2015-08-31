@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>思迪亚体育</title>
+	<title>{$title}</title>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/share.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.fullScreenSlider.css">
@@ -36,41 +36,15 @@
 		</nav>		
 		<div id="slider">
 			<ul class="slider">
+				<volist name="banner" id="vo" >
 				<li>
-					<img src="__PUBLIC__/images/banner_1.jpg" alt="图片展示">
+					<img src="{$vo.path}" alt="{$vo.title}">
 					<div>
-						<h1>标题文字1</h1>
-						<p>这是描述这一张图片的文字，后台上传时添加</p>
+						<h1>{$vo.title}</h1>
+						<p>{$vo.intro}</p>
 					</div>
 				</li>
-				<li>
-					<img src="__PUBLIC__/images/banner_1.jpg" alt="图片展示">
-					<div>
-						<h1>标题文字2</h1>
-						<p>这是描述这一张图片的文字，后台上传时添加</p>
-					</div>
-				</li>
-				<li>
-					<img src="__PUBLIC__/images/banner_1.jpg" alt="图片展示">
-					<div>
-						<h1>标题文字3</h1>
-						<p>这是描述这一张图片的文字，后台上传时添加</p>
-					</div>
-				</li>
-				<li>
-					<img src="__PUBLIC__/images/banner_1.jpg" alt="图片展示">
-					<div>
-						<h1>标题文字4</h1>
-						<p>这是描述这一张图片的文字，后台上传时添加</p>
-					</div>
-				</li>
-				<li>
-					<img src="__PUBLIC__/images/banner_1.jpg" alt="图片展示">
-					<div>
-						<h1>标题文字5</h1>
-						<p>这是描述这一张图片的文字，后台上传时添加</p>
-					</div>
-				</li>
+				</volist>
 			</ul>
 		</div>
 		<script type="text/javascript" src="__PUBLIC__/js/jquery.fullScreenSlider.js"></script>
@@ -80,60 +54,25 @@
 	</header>
 	<div id="section2">
 		<ul id="describe">
+		<volist name="course" id="vo" >
 			<li>
-				<img src="__PUBLIC__/images/set2.gif">
+				<img src="{$vo.path}">
 				<div>
 					<p>
-						<span class="title">快乐篮球</span>
-						<a href="#">即刻启程</a>
+						<span class="title">{$vo.name}</span>
+						<a href="{:U('showContent')}?cid={$vo.cid}">即刻启程</a>
 						<span class="rank rank5"></span>
 					</p>
 				</div>
-			</li>
-			<li>
-				<img src="__PUBLIC__/images/set1.gif">
-				<div>
-					<p>
-						<span class="title">激情篮球</span>
-						<a href="#">即刻启程</a>
-						<span class="rank rank4"></span>
-					</p>
-				</div>
-			</li>
-			<li>
-				<img src="__PUBLIC__/images/set2.gif">
-				<div>
-					<p>
-						<span class="title">中考篮球</span>
-						<a href="#">即刻启程</a>
-						<span class="rank rank2"></span>
-					</p>
-				</div>
-			</li>
-			<li>
-				<img src="__PUBLIC__/images/set1.gif">
-				<div>
-					<p>
-						<span class="title">定向篮球</span>
-						<a href="#">即刻启程</a>
-						<span class="rank rank3"></span>
-					</p>
-				</div>
 			</li>			
+			</volist>
 		</ul>
 		<ul id="showBox">
+		  <volist name="course" id="vo" >
 			<li>
-				<img src="__PUBLIC__/images/show1.jpg">
+				<img src="{$vo.poster}">
 			</li>
-			<li>
-				<img src="__PUBLIC__/images/show2.jpg">
-			</li>
-			<li>
-				<img src="__PUBLIC__/images/show3.jpg">
-			</li>
-			<li>
-				<img src="__PUBLIC__/images/show4.jpg">
-			</li>			
+			</volist>	
 		</ul>
 	</div>
 	<div id="section3">
@@ -221,3 +160,4 @@
 		<p style="clear:both;"></p>
 	</div>
 <include file="Public/footer" />
+<script type="text/javascript" src="__PUBLIC__/js/section2.js"></script>

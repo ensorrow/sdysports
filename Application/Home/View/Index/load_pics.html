@@ -1,15 +1,6 @@
 
 	<a class="fancybox" href="__PUBLIC__/show_pics/01.jpg" data-fancybox-group="gallery" title="图片介绍1"><img src="__PUBLIC__/show_pics/1s.jpg" alt="" /></a>
 
-	<a class="fancybox" href="__PUBLIC__/show_pics/02.jpg" data-fancybox-group="gallery" title="图片介绍2"><img src="__PUBLIC__/show_pics/2s.jpg" alt="" /></a>
-
-	<a class="fancybox" href="__PUBLIC__/show_pics/03.jpg" data-fancybox-group="gallery" title="图片介绍3"><img src="__PUBLIC__/show_pics/3s.jpg" alt="" /></a>
-
-	<a class="fancybox" href="__PUBLIC__/show_pics/04.jpg" data-fancybox-group="gallery" title="图片介绍4"><img src="__PUBLIC__/show_pics/4s.jpg" alt="" /></a>
-
-	<a class="fancybox" href="__PUBLIC__/show_pics/05.jpg" data-fancybox-group="gallery" title="图片介绍5"><img src="__PUBLIC__/show_pics/5s.jpg" alt="" /></a>
-
-	<a class="fancybox" href="__PUBLIC__/show_pics/06.jpg" data-fancybox-group="gallery" title="图片介绍6"><img src="__PUBLIC__/show_pics/6s.jpg" alt="" /></a>
-
-	<a class="fancybox" href="__PUBLIC__/show_pics/07.jpg" data-fancybox-group="gallery" title="图片介绍7"><img src="__PUBLIC__/show_pics/7s.jpg" alt="" /></a>
-
+<volist name="pic" id="vo" >
+	<a class="fancybox" href="{$vo.path}" data-fancybox-group="gallery" title="{$vo.title}"><img src="{$vo.thumb}" alt="{$vo.content}" /></a>
+</volist>

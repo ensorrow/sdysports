@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>思迪亚课程计划</title>
+	<title>{$title}</title>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/share.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/common.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/coach.css">
@@ -20,9 +20,11 @@
 <include file="Public/header" />
 	<div id="main">
 		<ul id="list" class="m-pagination">
-			<include file="Index/load_coach" />
+
 		</ul>
 		<ul id="hidden_result" style="display:none;"></ul>
 		<div id="Pagination" class="pagination"></div>
 	</div>
 <include file="Public/footer" />
+<input type="hidden" id="load" value="{:U('showContent')}?cid={$column.cid}"/>
+
