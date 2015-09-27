@@ -1,0 +1,68 @@
+#form_wrapper{
+	width: 90%;
+	min-width: 400px;
+	min-height: 500px;
+	margin: 40px auto;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 30px 15px;
+}
+#form_wrapper:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#ex1,#ex2{
+	width: 50%;
+	float: left;
+	padding: 20px 0;
+}
+#ex1{
+	border-right: 1px solid #eee;
+}
+#ex2{
+	border-left: 1px solid #ddd;
+}
+#ex1>div{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#ex2>div{
+	margin-left: 35px;
+	margin-right: 5px;
+}
+#exc input[type=text]{
+	margin: 5px 0;
+}
+#exc textarea{
+	margin-top: 10px;
+}
+#exc input[type=file]{
+	display: inline-block;
+	margin-top: 10px;
+}
+input[type=submit]{
+	border: 0;
+	border-radius: 4px;
+	padding: 8px 25px;
+	color: #fff;
+	background-color: #39ADB4;
+	display: block;
+	margin-top: 20px;
+	margin-right: 40px;
+	float: right;
+}
+.form-group{
+	clear: left;
+}
+#user_head{
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: url(../images/person.jpg);
+	background-size: 100%;
+	float: right;
+	position: relative;
+	bottom: 5px;
+}
