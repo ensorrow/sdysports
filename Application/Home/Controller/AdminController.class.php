@@ -31,6 +31,10 @@ class AdminController extends Controller {
     }
     public function edit(){
         //TODO:edit all the type of columns
+        if(!session('admin')){
+            $this->error('请登录！',U('login'));
+            return;
+        }
         $mColumn = M('Column');
         $column = $mColumn->where(I('get.'))->find();
         if(!$column) $this->error('没有此栏目！');
@@ -71,8 +75,84 @@ class AdminController extends Controller {
                 }
             }
             break;
-        case C('TYPE_SPECIAL'):
-
+        }
+    }
+    public function editArticle(){
+        if(!session('admin')){
+            $this->error('请登录！',U('login'));
+            return;
+        }
+        $mArticle = M('Article');
+        if(IS_GET){
+            $art = $mArticle->where(['id'=>I('get.aid')])->find();
+            if(!$art) $this->error('没有这篇文章！');
+            else {
+                if('delete' === I('get.action')) {
+                    $mArticle->where(I('get.id'))->delete();
+                    $this->success();
+                    return;
+                }
+                $this->assign('article',$art);
+            }
+        }
+        if(IS_POST){
+            $result = $mArticle->add(I('get.'),true);
+            if($result) $this->success('成功!');
+            else $this->error('失败!');
+        }
+    }
+    public function editCoach(){
+        if(!session('admin')){
+            $this->error('请登录！',U('login'));
+            return;
+        }
+        $mCoach = M('Coach');
+        if(IS_GET){
+            $coaches = $mCoach->select();
+            $this->assign('coach',$coaches);
+            $this->display();
+        }
+        if(IS_POST){
+            if('delete' === I('post.action')){
+                $result = $mCoach->where(['id'=>I('post.id')])->delete();
+                if($result) $this->success('删除成功！');
+                else $this->error('删除失败！');
+                return;
+            }
+            $coach = $mCoach->where(['id'=>I('get.id')])->find();
+            if(!$coach) $this->error('没有此教练！');
+            else{
+                $result = $mCoach->add(I('post.'),true);
+                if($result) $this->success('成功！');
+                else $this->error('失败！');
+            }
+        }
+    }
+    public function editVideo(){
+        if(!session('admin')){
+            $this->error('请登录！',U('login'));
+            return;
+        }
+        $mVideo = M('Video');
+        if(IS_GET){
+            $videos = $mVideo->select();
+            $this->assign('video',$videos);
+            $this->display();
+        }
+        if(IS_POST){
+            if('delete' === I('post.action')){
+                $result = $mVideo->where(['id'=>I('post.id')])->delete();
+                if($result) $this->success('删除成功！');
+                else $this->error('删除失败！');
+                return;
+            }
+            $video = $mVideo->where(I('post.id'))->find();
+            if(!$video) $this->error('没有这个视频');
+            else {
+                $result = $mVideo->add(I('post.'),true);
+                if($result) $this->success('成功！');
+                else $this->error('失败！');
+            }
         }
     }
 }
