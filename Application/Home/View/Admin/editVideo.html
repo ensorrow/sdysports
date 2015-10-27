@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>视频发布</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="__PUBLIC__/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/templatemo-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/admin_common.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+      <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>  
+    <!-- Left column -->
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <div class="square"></div>
+          <h1>思迪亚体育联盟</h1>
+        </header>
+        <div class="profile-photo-container">
+          <img src="__PUBLIC__/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
+          <div class="profile-photo-overlay"></div>
+        </div>      
+        <!-- Search box -->
+        <form class="templatemo-search-form" role="search">
+          <div class="input-group">
+              <button type="submit" class="fa fa-search"></button>
+              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">           
+          </div>
+        </form>
+        <div class="mobile-menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="#"><i class="fa fa-home fa-fw"></i>首页</a></li>
+            <li><a href="course-plan.html"><i class="fa fa-bar-chart fa-fw"></i>课程计划</a></li>
+            <li><a href="excellent.html"><i class="fa fa-database fa-fw"></i>优秀学员</a></li>
+            <li><a href="video-upload.html" class="active"><i class="fa fa-map-marker fa-fw"></i>视频发布</a></li>
+            <li><a href="add-news.html"><i class="fa fa-map-marker fa-fw"></i>新闻发布</a></li>
+            <li><a href="manage-admin.html"><i class="fa fa-users fa-fw"></i>用户管理</a></li>
+            <li><a href="login.html"><i class="fa fa-eject fa-fw"></i>退出登录</a></li>
+          </ul>  
+        </nav>
+      </div>
+      <!-- Main content --> 
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+              <ul class="text-uppercase">
+                <li><a href="index.html" class="active">后台管理</a></li>
+                <li><a href="login.html">网站首页</a></li>
+              </ul>
+              <span id="user_head"></span>  
+            </nav> 
+          </div>
+        </div>
+        <div id="form_wrapper">
+          <div class="square"></div>
+          <h2 class="templatemo-inline-block">视频发布</h2><hr>          
+          <form method="post" enctype="multipart/form-data" action="{:U('editVideo')}">
+            <div class="col-lg-6 col-md-6 form-group">
+              <label for="title">输入视频名称：</label>
+              <input type="text" id="title" class="form-control">
+            </div>
+            <div class="col-lg-6 col-md-6 form-group">
+              <label for="intro">输入视频简介：</label>
+              <input type="text" id="intro" class="form-control">
+            </div>
+            <div class="form-group">
+              <div class="col-lg-12">
+                <label class="control-label templatemo-block">上传视频：</label>
+                <input type="file" name="video" id="video" class="filestyle" data-buttonName="btn-primary" data-buttonBefore="true" data-icon="false">              
+              </div>
+            </div>
+            <div style="clear:both;"></div>
+            <input type="submit" value="提交">
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- JS -->
+    <script src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+    <script type="text/javascript" src="__PUBLIC__/js/bootstrap-filestyle.min.js"></script>  <!-- http://markusslima.github.io/bootstrap-filestyle/ -->
+    <script src="__PUBLIC__/js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
+    <script type="text/javascript" src="__PUBLIC__/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+
+  </body>
+</html>

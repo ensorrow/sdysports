@@ -6,6 +6,8 @@ class AdminController extends Controller {
         if(!session('admin')){
             $this->error('Please Login!',U('Admin/login'));
         } else {
+            $mColumn = M('Column');
+            $this->assign('column',$mColumn->order('cid asc')->select());
             $this->display();
         }
     }
@@ -27,7 +29,7 @@ class AdminController extends Controller {
     }
     public function logout(){
         session('admin',0);
-        $this->success('Success!',3,U('Home/index'));
+        $this->success('Success!',3,U('Index/index'));
     }
     public function edit(){
         //TODO:edit all the type of columns
@@ -38,13 +40,15 @@ class AdminController extends Controller {
         $mColumn = M('Column');
         $column = $mColumn->where(I('get.'))->find();
         if(!$column) $this->error('没有此栏目！');
-        if(!$column['path']) $this->error('没有对应模板！');
         switch ($column['type']){
         case C('TYPE_ARTICLE'):
             $mArticle = M('Article');
             $content = $mArticle->where(['cid'=>I('get.cid')])->find();
+            $content['content'] = htmlspecialchars_decode($content['content']);
             if(IS_GET){
-                $this->assign('content',$content);
+                $columns = $mColumn->order('cid asc')->select();
+                $this->assign('column',$columns);
+                $this->assign('art',$content);
                 $this->display('article');
             }
             if(IS_POST){
@@ -59,23 +63,34 @@ class AdminController extends Controller {
         case C('TYPE_NORMAL'):
             $mList = M($column['table']);
             if(IS_GET){
-                $list = $mList->where(['cid'=>$column['id']])->select();
-                $this->assign('list',$list);
-                $this->display('list');
-            }
-            if(IS_POST){
-                if('delete'==I('post.method')){
-                    $result = $mList->where(['id'=>I('post.id')])->delete();
+                if('delete'==I('get.method')){
+                    $result = $mList->where(['id'=>I('get.id')])->delete();
                     if($result) $this->success('删除成功！');
                     else $this->error('删除失败！');
                 } else {
+                    $list = $mList->where(['cid'=>$column['cid']])->select();
+                    $this->assign('list',$list);
+                    $this->assign('table',ucfirst($column['table']));
+                    $this->display('list');
+                }
+            }
+            if(IS_POST){
                     $result = $mList->add(I('post.'),true);
                     if($result) $this->success('编辑成功！');
                     else $this->error('失败！');
-                }
             }
             break;
+        case C('TYPE_SPECIAL'):
+            redirect(U('edit'.ucfirst($column['path'])));
         }
+
+        
+    }
+    public function delete(){
+        $mColumn = M('Column');
+        $result = $mColumn->where(['cid'=>I('get.cid')])->delete();
+        if($result) $this->success('成功！');
+        else $this->error('失败！');
     }
     public function editArticle(){
         if(!session('admin')){
@@ -84,19 +99,26 @@ class AdminController extends Controller {
         }
         $mArticle = M('Article');
         if(IS_GET){
-            $art = $mArticle->where(['id'=>I('get.aid')])->find();
-            if(!$art) $this->error('没有这篇文章！');
-            else {
-                if('delete' === I('get.action')) {
-                    $mArticle->where(I('get.id'))->delete();
-                    $this->success();
-                    return;
+            if(isset($_GET['id'])){
+                $art = $mArticle->where(['id'=>I('get.id')])->find();
+                $art['content'] = htmlspecialchars_decode($art['content']);
+                if(!$art) $this->error('没有这篇文章！');
+                else {
+                    if('delete' === I('get.action')) {
+                        $mArticle->where(I('get.id'))->delete();
+                        $this->success();
+                        return;
+                    }
+
+                    $this->assign('art',$art);
                 }
-                $this->assign('article',$art);
             }
+                    $column = M('Column')->select();
+                    $this->assign('column',$column);
+            $this->display('article');
         }
         if(IS_POST){
-            $result = $mArticle->add(I('get.'),true);
+            $result = $mArticle->add(I('post.'),[],true);
             if($result) $this->success('成功!');
             else $this->error('失败!');
         }
@@ -122,7 +144,7 @@ class AdminController extends Controller {
             $coach = $mCoach->where(['id'=>I('get.id')])->find();
             if(!$coach) $this->error('没有此教练！');
             else{
-                $result = $mCoach->add(I('post.'),true);
+                $result = $mCoach->add(I('post.'),[],true);
                 if($result) $this->success('成功！');
                 else $this->error('失败！');
             }
@@ -146,13 +168,21 @@ class AdminController extends Controller {
                 else $this->error('删除失败！');
                 return;
             }
-            $video = $mVideo->where(I('post.id'))->find();
-            if(!$video) $this->error('没有这个视频');
-            else {
-                $result = $mVideo->add(I('post.'),true);
+                $upload = new \Think\Upload();
+                $upload->maxSize = 0;
+                $upload->exts = ['mp4','rmvb','flv','avi'];
+                $upload->rootPath = './Public/videos';
+                $info = $upload->uploadOne($_FILES['video']);
+                if(!$info){
+                    $this->error($upload->getError());
+                }else{
+                    $video = I('post.');
+                    $video['path'] = $info['savepath'].$info['savename'];
+                
+                $result = $mVideo->add($video,[],true);
                 if($result) $this->success('成功！');
                 else $this->error('失败！');
-            }
+                }
         }
     }
 }
